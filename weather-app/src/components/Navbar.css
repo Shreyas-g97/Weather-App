@@ -1,0 +1,17 @@
+.title {
+    font-size: 2.2em;
+    justify-content: flex-start;
+}
+
+.me-auto {
+    padding-left: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.nav-link {
+    margin-left: 20px;
+    font-size: 1.2em;
+}
