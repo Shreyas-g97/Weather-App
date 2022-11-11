@@ -1,0 +1,17 @@
+.sidebar-cont {
+    position: absolute;
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    padding: 0;
+    margin: 5px;
+    opacity: 70%;
+}
+
+.card:hover {
+    opacity: 100%;
+}
+
