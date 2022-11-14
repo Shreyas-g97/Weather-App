@@ -3,7 +3,7 @@ import './Home.css'
 
 function Home(props) {
   return (
-    <Card style={{ width: '82%' }} className="big-card">
+    <Card className="big-card">
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
         <Card.Title>{props.weatherData.name}, {props.weatherData.sys.country}</Card.Title>

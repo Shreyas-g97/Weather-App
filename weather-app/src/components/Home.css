@@ -1,9 +1,17 @@
 .big-card {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
-    margin-left: 18rem;
+    margin-left: 2vw;
     top: 10px;
     height: 88vh;
+    max-width: 82%;
+}
+
+@media (max-width: 800px) {
+    .big-card {
+        max-width: 95%;
+        margin-left: 2vw;
+        text-align: center;
+    }
 }

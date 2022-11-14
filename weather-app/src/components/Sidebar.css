@@ -1,14 +1,16 @@
 .sidebar-cont {
     position: absolute;
-    width: 0;
+    max-width: 0;
     margin: 0;
     padding: 0;
+    right: 15vw;
 }
 
 .card {
     padding: 0;
     margin: 5px;
     opacity: 70%;
+    min-width: none;
 }
 
 .card:hover {

@@ -3,11 +3,11 @@
 }
 
 .main {
-  position: relative;
   background-image: url('./components/bg-img.jpg');
   opacity: 90%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center/cover;
   height: 100vh;
+  width: auto;
 }

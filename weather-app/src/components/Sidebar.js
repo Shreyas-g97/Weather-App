@@ -6,7 +6,7 @@ import './Sidebar.css'
 
 function Sidebar(props) {
   return (
-    <Container className='sidebar-cont'>
+    <Container className='sidebar-cont d-none d-xl-block'>
         <ListGroup variant="flush">
           <ListGroup.Item className='card'>
             <Card style={{ width: '15rem'}}>
