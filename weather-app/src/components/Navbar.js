@@ -9,21 +9,25 @@ import { useState } from 'react';
 
 
 function WeatherNav({navToApp}) {
-  const [data, setData] = useState({});
+  // const [data, setData] = useState({});
   const [location, setLocation] = useState('');
 
-  const searchLocation = () => {
-      fetch('https://api.openweathermap.org/data/2.5/weather?q='+location+'&appid=92abaca45f3fcc4b3c2415b155afc482')
-       .then(res => res.json())
-       .then(result => {
-        console.log(result);
-        setData(result);
-       })
-       .then(navToApp(data))
-        .catch((err) => {
-          console.log(err)
-        })
-    }
+  // const searchLocation = () => {
+  //     fetch('https://api.openweathermap.org/data/2.5/weather?q='+location+'&appid=92abaca45f3fcc4b3c2415b155afc482')
+  //      .then(res => res.json())
+  //      .then(result => {
+  //       setData(result);
+  //      })
+  //      .then(navToApp(data))
+  //       .catch((err) => {
+  //         console.log(err)
+  //       })
+  //   }
+
+  const returnLocationToApp = async () => {
+    console.log(location);
+    await navToApp(location);
+  }
 
   return (
     <Navbar bg="dark" expand="xxl" variant="dark">
@@ -42,7 +46,7 @@ function WeatherNav({navToApp}) {
               value={location}
               onChange={event => setLocation(event.target.value)}
             />
-            <Button variant="outline-light" onClick={searchLocation}>Search</Button>
+            <Button variant="outline-light" onClick={returnLocationToApp}>Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
