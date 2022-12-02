@@ -1,5 +1,7 @@
 # Weather-App
-A weather app built with React and Bootstrap using the openweathermap api. This application is still in production.
+A weather app built with React and Bootstrap using the openweathermap api.
+This application is still in production.
+To search for weather of a location, just type in any location around the world and hit the search button.
 
 Current Bugs:
 - Forecast not passing to the sidebar component and refreshing without page reload.
