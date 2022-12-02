@@ -8,10 +8,71 @@
     max-width: 82%;
 }
 
+h1 {
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: left;
+    margin-top: 5vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.temp {
+    margin-bottom: 0;
+    font-size: 8rem;
+}
+
+.description {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.hilo {
+    font-size: 1.2rem;
+}
+
+.rain:hover {
+    background-image: url('../images/rain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.clear:hover {
+    background-image: url('../images/clear.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.cloud:hover {
+    background-image: url('../images/cloud.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.mist:hover {
+    background-image: url('../images/mist.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
 @media (max-width: 1024px) {
     .big-card {
         max-width: 95%;
         margin-left: 2vw;
         text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
     }
 }

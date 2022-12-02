@@ -9,20 +9,25 @@ import Loading from './components/Loading';
 function App() {
   const [lat, setLat] = useState([]);
   const [lon, setLon] = useState([]);
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   const [location, setLocation] = useState('');
+  const [forecastData, setForecastData] = useState([]);
 
   {/* Hook to set weather to user location on initial visit to the website*/}
   useEffect(() => {
     if (location != '') {
+      fetch('https://api.openweathermap.org/data/2.5/forecast?q='+location+'&appid=92abaca45f3fcc4b3c2415b155afc482')
+      .then(res => res.json())
+      .then(result => {
+       setForecastData(result);
+      })
+      .then(console.log(forecastData))
+
       fetch('https://api.openweathermap.org/data/2.5/weather?q='+location+'&appid=92abaca45f3fcc4b3c2415b155afc482')
        .then(res => res.json())
        .then(result => {
         setData(result);
        })
-        .catch((err) => {
-          console.log(err);
-        })
     } else {
     const fetchData = async () => {
       navigator.geolocation.getCurrentPosition(function(position) {
@@ -38,15 +43,13 @@ function App() {
     }
     fetchData();
   }
-  }, [location])
+  }, [location, lat, lon])
 
   {/* function to transfer data from Navbar to App*/}
 
   const navToApp = (navData) => {
     console.log(navData);
-    setTimeout(() => {
-	setLocation(navData);
-}, 1000)
+	  setLocation(navData);
   }
 
 
@@ -54,7 +57,8 @@ function App() {
     <div className="App">
       <WeatherNav fixed="top" navToApp={navToApp}/>
       <div className='main'>
-        <Sidebar/>
+      {(typeof forecastData.main != 'undefined') ? (
+         <Sidebar className='home' key={forecastData} forecastData={forecastData}/>):(<div></div>)}
         {(typeof data.main != 'undefined') ? (
          <Home className="home" key={data} weatherData={data}/>):(<Loading/>)}
       </div>

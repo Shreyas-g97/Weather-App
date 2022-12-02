@@ -9,20 +9,7 @@ import { useState } from 'react';
 
 
 function WeatherNav({navToApp}) {
-  // const [data, setData] = useState({});
   const [location, setLocation] = useState('');
-
-  // const searchLocation = () => {
-  //     fetch('https://api.openweathermap.org/data/2.5/weather?q='+location+'&appid=92abaca45f3fcc4b3c2415b155afc482')
-  //      .then(res => res.json())
-  //      .then(result => {
-  //       setData(result);
-  //      })
-  //      .then(navToApp(data))
-  //       .catch((err) => {
-  //         console.log(err)
-  //       })
-  //   }
 
   const returnLocationToApp = async () => {
     console.log(location);
@@ -36,7 +23,6 @@ function WeatherNav({navToApp}) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className='nav-link'>Home</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <input

@@ -4,11 +4,11 @@ import './Home.css'
 function Home(props) {
   return (
     <Card className="big-card">
-      <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
-        <Card.Title>{props.weatherData.name}, {props.weatherData.sys.country}</Card.Title>
-        <Card.Text>{props.weatherData.weather[0].description}</Card.Text>
-        <Card.Text>{Math.round(((props.weatherData.main.temp - 273.15) *(9/5)) + 32)}</Card.Text>
+        <Card.Title><h1>{props.weatherData.name}</h1></Card.Title>
+        <Card.Text className='temp'>{Math.round(((props.weatherData.main.temp - 273.15) *(9/5)) + 32)}°F</Card.Text>
+        <Card.Text className='description'>{props.weatherData.weather[0].description}</Card.Text>
+        <Card.Text className='hilo'>H: {Math.round(((props.weatherData.main.temp_max - 273.15) *(9/5)) + 32)} | L: {Math.round(((props.weatherData.main.temp_min - 273.15) *(9/5)) + 32)}</Card.Text>
       </Card.Body>
     </Card>
   );

@@ -3,11 +3,21 @@
 }
 
 .main {
-  background-image: url('./components/bg-img.jpg');
-  opacity: 90%;
+  background-image: url('./images/bg-img.jpg');
+  opacity: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center/cover;
+  background-position: center;
   height: 100vh;
   width: auto;
+}
+
+@media (max-width: 1024px) {
+  .main{
+    background-image: url('./components/bg-img.jpg');
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }

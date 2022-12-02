@@ -9,11 +9,14 @@
 .card {
     padding: 0;
     margin: 5px;
-    opacity: 70%;
     min-width: none;
+    background-color: transparent;
+    color: white;
+    transition: 0s;
 }
 
 .card:hover {
+    transition-duration: 1s;
     opacity: 100%;
 }
 
